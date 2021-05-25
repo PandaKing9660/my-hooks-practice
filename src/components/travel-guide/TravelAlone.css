@@ -1,0 +1,10 @@
+.card-info {
+  background-color: aliceblue;
+  max-width: fit-content;
+}
+
+.card-info img {
+  height: 40%;
+  width: 40%;
+  margin: 20px;
+}
