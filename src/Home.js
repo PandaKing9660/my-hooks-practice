@@ -34,6 +34,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link className="link-btn" to="/game">
+              Game
+            </Link>
+          </li>
+          <li>
             <Link className="link-btn" to="/reducer">
               Reducer
             </Link>
@@ -48,6 +53,12 @@ const Navbar = () => {
               Face Recognition
             </Link>
           </li>
+          <li>
+            <Link className="link-btn" to="/robo-friends">
+              RoboFriends
+            </Link>
+          </li>
+
         </ul>
         <button className="btn signin-btn">Sign in</button>
       </div>

@@ -8,6 +8,8 @@ import Reducer from './components/Reducer/Reducer';
 import Grocery from './components/Grocery/Grocery';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import {AppProvider} from './components/ContextPractice/Context';
+import Game from './components/Game/Game';
+import RoboFriends from './components/RoboFriends/App';
 
 function App () {
   return (
@@ -35,6 +37,12 @@ function App () {
             <Route exact path="/face-recognition">
               <FaceRecognition />
             </Route>
+            <Route exact path="/game">
+              <Game />
+            </Route><Route exact path="/robo-friends">
+              <RoboFriends />
+            </Route>
+
           </Switch>
         </div>
       </Router>
