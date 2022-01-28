@@ -58,6 +58,11 @@ const Navbar = () => {
               RoboFriends
             </Link>
           </li>
+          <li>
+            <Link className="link-btn" to="/google-sheet">
+              Google Form
+            </Link>
+          </li>
 
         </ul>
         <button className="btn signin-btn">Sign in</button>

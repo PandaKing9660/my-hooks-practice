@@ -10,6 +10,8 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import {AppProvider} from './components/ContextPractice/Context';
 import Game from './components/Game/Game';
 import RoboFriends from './components/RoboFriends/App';
+import GoogleSheetConnection
+  from './components/Google-SheetConnection/GoogleSheetConnection';
 
 function App () {
   return (
@@ -39,8 +41,12 @@ function App () {
             </Route>
             <Route exact path="/game">
               <Game />
-            </Route><Route exact path="/robo-friends">
+            </Route>
+            <Route exact path="/robo-friends">
               <RoboFriends />
+            </Route>
+            <Route exact path="/google-sheet">
+              <GoogleSheetConnection />
             </Route>
 
           </Switch>

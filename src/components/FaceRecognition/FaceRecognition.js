@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Logo from './Logo';
 import SignIn from '../SignUp/SignIn';
+
 import Clarifai from 'clarifai';
 import ImageShow from './ImageShow';
 
@@ -46,12 +47,7 @@ const FaceRecognition = () => {
     setCount (count + 1);
   };
 
-  const handleSignInSubmit = (e, name, email, password) => {
-    e.preventDefault ();
-    if (name === '' || email === '' || password === '') {
-      console.log (e);
-      return;
-    }
+  const handleSignInSubmit = (name) => {
     setUserName (name);
     setIsSignIn (true);
   };

@@ -1,44 +1,31 @@
 import {useState} from 'react';
 import './SignIn.css';
+import Login from './Login';
+import Register from './Register';
+
 const SignIn = ({handleSignInSubmit}) => {
-  const [name, setName] = useState ('');
-  const [email, setEmail] = useState ('');
-  const [password, setPassword] = useState ('');
+  const [isRegisterPage, setIsRegisterPage] = useState (false);
+
+
 
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
-      <div>
-        <form id="myForm">
+      {isRegisterPage === false
+        ? <div>
+            <Login handleSubmit = {handleSignInSubmit}/>
 
-          <input
-            placeholder="Name"
-            type="text"
-            value={name}
-            onChange={e => setName (e.target.value)}
-          />
-          <br />
-          <input
-            placeholder="Email"
-            value={email}
-            type="text"
-            onChange={e => setEmail (e.target.value)}
-          />
-          <br />
-          <input
-            placeholder="Password"
-            value={password}
-            type="password"
-            onChange={e => setPassword (e.target.value)}
-          />
+            <button onClick={() => setIsRegisterPage (true)}>
+              Go to Register page
+            </button>
+          </div>
+        : <div>
+            <Register setIsRegisterPage = {setIsRegisterPage}/>
 
-          <br />        <button
-            type="submit"
-            onClick={e => handleSignInSubmit (e, name, email, password)}
-          >
-            SignIn
-          </button>
-        </form>
-      </div>
+            <button onClick={() => setIsRegisterPage (false)}>
+              Go to Login page
+            </button>
+          </div>}
+
     </div>
   );
 };
